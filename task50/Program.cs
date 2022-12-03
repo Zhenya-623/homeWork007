@@ -47,4 +47,6 @@ Console.Write("Введите номер строки искомого элем�
 int rowsFind = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите номер столбца искомого элемента: ");
 int columnsFind = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"Значение искомого элемента равно -> {array2D[rowsFind - 1, columnsFind - 1]}");
+if (rowsFind > array2D.GetLength(0) || columnsFind > array2D.GetLength(1))
+    Console.WriteLine("Вы вышли за пределы поиска");
+else Console.WriteLine($"Значение искомого элемента равно -> {array2D[rowsFind - 1, columnsFind - 1]}");
